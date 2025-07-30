@@ -27,3 +27,5 @@ export const themes = {
     layout: "grid grid-cols-1 md:grid-cols-2 gap-4 p-6",
   },
 };
+
+export type ThemeType = typeof themes.theme1;
