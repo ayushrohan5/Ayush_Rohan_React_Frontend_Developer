@@ -7,9 +7,13 @@ import Contact from "./pages/Contact";
 
 export default function App() {
   return (
+    // Wrap entire app with ThemeProvider for global theme state
     <ThemeProvider>
       <BrowserRouter>
+        {/* Persistent Header */}
         <Header />
+
+        {/* Pages handled by React Router */}
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />

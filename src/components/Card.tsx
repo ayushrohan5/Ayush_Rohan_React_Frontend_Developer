@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function Card({ product }: { product: any }) {
+  const { theme } = useContext(ThemeContext); // Get current theme
+
   return (
     <motion.div
-      className="p-4 shadow-md rounded-lg bg-white"
+      // Background and text color now come from theme
+      style={{ background: theme.background === "#121212" ? "#1e1e1e" : "#ffffff", color: theme.text }}
+      className="p-4 shadow-md rounded-lg transition-all duration-300"
       whileHover={{ scale: 1.05 }}
     >
       <img src={product.image} alt={product.title} className="h-32 mx-auto"/>
