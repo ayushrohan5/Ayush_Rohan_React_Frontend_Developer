@@ -13,7 +13,7 @@ export default function Home() {
       .then(data => setProducts(data.slice(0, 6))); // Limit to 6 products
   }, []);
 
-  // Detect if current theme is Theme 2
+  // Detect active themes
   const isTheme1 = theme.name === "Minimalist";
   const isTheme2 = theme.name === "Dark Mode";
   const isTheme3 = theme.name === "Colorful";
